@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>sturdysporkClass</class>
+ <widget class="QMainWindow" name="sturdysporkClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>sturdyspork</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="imageLayout"/>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="controlLayout"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <widget class="QMenu" name="menuSauvegarder">
+     <property name="title">
+      <string>Sauvegarder...</string>
+     </property>
+     <addaction name="actionImage"/>
+     <addaction name="actionDonn_es"/>
+    </widget>
+    <widget class="QMenu" name="menuCharger">
+     <property name="title">
+      <string>Charger</string>
+     </property>
+     <addaction name="actionDonn_es_2"/>
+    </widget>
+    <addaction name="menuSauvegarder"/>
+    <addaction name="menuCharger"/>
+   </widget>
+   <addaction name="menuFichier"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionImage">
+   <property name="text">
+    <string>Image</string>
+   </property>
+  </action>
+  <action name="actionDonn_es">
+   <property name="text">
+    <string>Données</string>
+   </property>
+  </action>
+  <action name="actionDonn_es_2">
+   <property name="text">
+    <string>Données</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="sturdyspork.qrc"/>
+ </resources>
+ <connections/>
+</ui>
