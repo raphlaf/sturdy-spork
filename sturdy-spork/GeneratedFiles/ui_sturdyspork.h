@@ -12,10 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
@@ -33,7 +35,9 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *imageLayout;
+    QGraphicsView *graphicsView;
     QVBoxLayout *controlLayout;
+    QPushButton *pushButton;
     QMenuBar *menuBar;
     QMenu *menuFichier;
     QMenu *menuSauvegarder;
@@ -45,7 +49,7 @@ public:
     {
         if (sturdysporkClass->objectName().isEmpty())
             sturdysporkClass->setObjectName(QString::fromUtf8("sturdysporkClass"));
-        sturdysporkClass->resize(600, 431);
+        sturdysporkClass->resize(1600, 900);
         actionImage = new QAction(sturdysporkClass);
         actionImage->setObjectName(QString::fromUtf8("actionImage"));
         actionDonn_es = new QAction(sturdysporkClass);
@@ -64,12 +68,22 @@ public:
         imageLayout = new QVBoxLayout();
         imageLayout->setSpacing(6);
         imageLayout->setObjectName(QString::fromUtf8("imageLayout"));
+        graphicsView = new QGraphicsView(centralWidget);
+        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
+
+        imageLayout->addWidget(graphicsView);
+
 
         horizontalLayout->addLayout(imageLayout);
 
         controlLayout = new QVBoxLayout();
         controlLayout->setSpacing(6);
         controlLayout->setObjectName(QString::fromUtf8("controlLayout"));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        controlLayout->addWidget(pushButton);
+
 
         horizontalLayout->addLayout(controlLayout);
 
@@ -79,7 +93,7 @@ public:
         sturdysporkClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(sturdysporkClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 21));
+        menuBar->setGeometry(QRect(0, 0, 1600, 21));
         menuFichier = new QMenu(menuBar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuSauvegarder = new QMenu(menuFichier);
@@ -108,10 +122,11 @@ public:
 
     void retranslateUi(QMainWindow *sturdysporkClass)
     {
-        sturdysporkClass->setWindowTitle(QApplication::translate("sturdysporkClass", "sturdyspork", nullptr));
+        sturdysporkClass->setWindowTitle(QApplication::translate("sturdysporkClass", "Sturdy Spork", nullptr));
         actionImage->setText(QApplication::translate("sturdysporkClass", "Image", nullptr));
         actionDonn_es->setText(QApplication::translate("sturdysporkClass", "Donn\303\251es", nullptr));
         actionDonn_es_2->setText(QApplication::translate("sturdysporkClass", "Donn\303\251es", nullptr));
+        pushButton->setText(QApplication::translate("sturdysporkClass", "PushButton", nullptr));
         menuFichier->setTitle(QApplication::translate("sturdysporkClass", "Fichier", nullptr));
         menuSauvegarder->setTitle(QApplication::translate("sturdysporkClass", "Sauvegarder...", nullptr));
         menuCharger->setTitle(QApplication::translate("sturdysporkClass", "Charger", nullptr));

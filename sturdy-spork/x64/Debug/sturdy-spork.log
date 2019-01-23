@@ -1,9 +1,5 @@
 ﻿  Moc'ing sturdyspork.h...
-  Rcc'ing sturdyspork.qrc...
-  Uic'ing sturdyspork.ui...
-  RCC: Warning: No resources in 'C:\Users\Rapha├½lLafond-Mercie\source\repos\sturdy-spork\sturdy-spork\sturdyspork.qrc'.
+  moc_sturdyspork.cpp
   main.cpp
   sturdyspork.cpp
-  moc_sturdyspork.cpp
-  qrc_sturdyspork.cpp
   sturdy-spork.vcxproj -> C:\Users\RaphaëlLafond-Mercie\source\repos\sturdy-spork\x64\Debug\sturdy-spork.exe
