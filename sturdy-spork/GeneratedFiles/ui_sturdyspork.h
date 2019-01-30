@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -37,6 +38,7 @@ public:
     QVBoxLayout *imageLayout;
     QGraphicsView *graphicsView;
     QVBoxLayout *controlLayout;
+    QLabel *label;
     QPushButton *pushButton;
     QMenuBar *menuBar;
     QMenu *menuFichier;
@@ -79,6 +81,11 @@ public:
         controlLayout = new QVBoxLayout();
         controlLayout->setSpacing(6);
         controlLayout->setObjectName(QString::fromUtf8("controlLayout"));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        controlLayout->addWidget(label);
+
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
@@ -126,6 +133,7 @@ public:
         actionImage->setText(QApplication::translate("sturdysporkClass", "Image", nullptr));
         actionDonn_es->setText(QApplication::translate("sturdysporkClass", "Donn\303\251es", nullptr));
         actionDonn_es_2->setText(QApplication::translate("sturdysporkClass", "Donn\303\251es", nullptr));
+        label->setText(QApplication::translate("sturdysporkClass", "TextLabel", nullptr));
         pushButton->setText(QApplication::translate("sturdysporkClass", "PushButton", nullptr));
         menuFichier->setTitle(QApplication::translate("sturdysporkClass", "Fichier", nullptr));
         menuSauvegarder->setTitle(QApplication::translate("sturdysporkClass", "Sauvegarder...", nullptr));
